@@ -1,0 +1,230 @@
+.navbar{
+	margin: 10px auto 0 auto;
+	border-radius: 25px;
+	width: 95%;
+	background-color: #ff6262;
+	font-size: 12px !important;
+	letter-spacing: 4px;
+	border: 0;
+	display: none;
+}
+
+body{
+	padding-top: 70px;
+	background-color:#ff3333; 
+}
+.navbar li a, .navbar .navbar-brand {
+	color: #fff !important;
+	border-radius: 25px;
+}
+.navbar li a:hover, .navbar-nav li.active a {
+	color: #ff6262 !important;
+	background-color: #fff !important;
+}
+.text-center a:hover {
+	color: red;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+iframe{
+	border-radius: 25px;
+}
+.bg-red{
+	background-color: #ff3333;
+	padding-bottom: 50px;
+	border-color: transparent;
+}
+.frame {
+	width:700px;
+	height: 400px;
+	margin: 20px auto 20px auto;
+	background-color: #ff6262;
+	padding-top: 20px;
+	border-radius: 25px;
+	
+}
+.post-text{
+	display: block;
+	margin: 0 0 0 440px;
+}
+.post-image img{
+	float: left;
+	border-radius: 25px;
+}
+.bg-white{
+	background-color: white;
+}
+.bg-grey{
+	background-color: #f6f6f6;
+}
+.ptb{ 
+	padding-top: 50px; /* padding top and bottom*/
+	padding-bottom: 50px;
+}
+.margin-auto{
+	margin: 0 auto 0 auto;
+}
+.width-50pc{
+	width: 50%;
+}
+footer{
+	color: white;
+}
+.mitsu-header {
+	margin-bottom: 50px;
+	letter-spacing: 1px;
+}
+.makise-kurisu img{
+	height: 450px;
+	width: 321px;
+	margin-left: -15px;
+}
+.makise-kurisu p, .makise-kurisu h3 {
+	display: block;
+	margin-left: 340px;
+}
+.makise-kurisu {
+	border-radius: 25px;
+}
+.bg-red h1 {
+	color: white;
+}
+.carbonai img {
+	width: 400px;
+	height: 400px;
+	margin-left: -15px;
+}
+.carbonai p, .carbonai h3 {
+	display: block;
+	margin-left: 410px;
+}
+.carbonai{
+	border-radius: 25px;
+}
+.ptb-carbonai {
+	padding: 50px 0 170px 0;
+}
+.cuver{
+	background-image: url(http://compass.xboxlive.com/assets/d9/ea/d9ea625d-0a5c-4454-ab7d-68fb9d7cfe04.jpg?n=ForzaHorizon3_E3PressKit_05_story.jpg);
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+.cuver-text{
+
+	margin-top: 250px;
+	padding: 20px;
+	background-color: rgba(0, 96, 199, 0.7);
+	width: 30%;
+
+}
+.mt20{
+	margin-top: 20px;
+}
+.black-text{
+	color:black;
+}
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+@media screen and (max-width: 1080px) and (min-width: 720px) {
+	.makise-kurisu img, .carbonai img, .post-image img {
+		margin-left: 0;
+		float: none;
+	}
+	.carbonai p, .carbonai h3, .makise-kurisu p, .makise-kurisu h3 , .post-text {
+		margin-left: 0;
+	}
+	.jutub iframe{
+		width: 90%;
+		height: 450px;
+	}
+	.frame{
+		width:100%;
+		margin: 20px 0 20px 0;
+		height: 500px;
+	}
+	.width-50pc{
+	width: 100%;
+	}
+}
+@media screen and (max-width: 720px) {
+	.makise-kurisu img, .carbonai img, .post-image img {
+		margin-left: 0;
+		float: none;
+	}
+	.carbonai p, .carbonai h3, .makise-kurisu p, .makise-kurisu h3 , .post-text {
+		margin-left: 0;
+	}
+	.jutub iframe{
+		width: 90%;
+		height: 200px;
+	}
+	.frame{
+		width:100%;
+		margin: 20px 0 20px 0;
+		height: 240px;
+	}
+	.width-50pc{
+	width: 100%;
+	}
+}
+@media screen and (max-width: 400px){
+	.makise-kurisu img, .carbonai img, .post-image img {
+		width: 90%;
+		height: 90%;
+		margin-left: 0;
+		float: none;
+	}
+	.carbonai p, .carbonai h3, .makise-kurisu p, .makise-kurisu h3 , .post-text {
+		margin-left: 0;
+	}
+	.jutub iframe{
+		width: 90%;
+		height: 200px;
+	}
+	.frame{
+		width:100%;
+		margin: 20px 0 20px 0;
+		height: 240px;
+	}
+	.width-50pc{
+	width: 100%;
+	}
+}
