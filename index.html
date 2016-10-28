@@ -99,7 +99,8 @@
 			<p>Contact us! @
 			<a href="#">rengarmacia@gmail.com</a> </p>
 		</div>
-	<form class="black-text" name="contactform" method="post" action="send_form_email.php">
+		
+	<!--<form class="black-text" name="contactform" method="post" action="send_form_email.php">
 		<table width="450px">		 
 		<tr>		 
 		 <td valign="top">		 
@@ -147,8 +148,9 @@
 		 </td>		 
 		</tr>		 
 		</table>		 
-	</form>
+	</form>-->
 	<!--<div class="cainter-fluid text-center">
+	
 			<form action="mailto:mataspss@gmail.com" method="post" enctype="text/plain">
 				Name:<br>
 			<input type="text" name="name"><br>
@@ -160,6 +162,11 @@
 			<input type="reset" value="Reset">
 			</form>
 		</div> -->
+	<form action="https://formspree.io/rengarmacia@gmail.com" method="POST">
+		<input type="text" name="name">
+		<input type="email" name="_replyto">
+		<input type="submit" value="Send">
+	</form>
 	</footer>
 <script>
 $(document).ready(function(){
