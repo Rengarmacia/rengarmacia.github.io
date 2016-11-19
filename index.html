@@ -12,7 +12,17 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="#">
 	<script href="text/javascript" src="script.js" ></script>
-
+	<script>
+		$(document).ready(function(){		
+			$(".action1").click(function(){
+				$(".pls").slideUp("slow");
+			}); 
+			
+			$(".action2").click(function(){
+				$(".pls").slideDown("slow");		
+			});
+		});
+	</script>
 </HEAD>
 <BODY  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 	<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
@@ -182,15 +192,6 @@ $("#sendMessage").on("click", function() {
     alert('Thanks for the email, we\'ll be in touch promptly.');
     return false;
 });
-$(document).ready(function(){		
-			$(".action1").click(function(){
-				$(".pls").slideUp("slow");
-			}); 
-			
-			$(".action2").click(function(){
-				$(".pls").slideDown("slow");		
-			});
-		});
 </script>
 
 
