@@ -15,11 +15,15 @@
 	<script>
 		$(document).ready(function(){		
 			$(".action1").click(function(){
-				$(".pls").slideUp("slow");
+				$("#pls").slideUp("slow",function({
+				});
+						
 			}); 
 			
 			$(".action2").click(function(){
-				$(".pls").slideDown("slow");		
+				$("#pls").slideDown("slow", function({
+					
+				});		
 			});
 		});
 	</script>
@@ -54,7 +58,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="pls">
+	<div id="pls">
 	<div class="container-fluid text-center bg-red jutub" id="width-calc">
 		<h1 id="width-meter"> Hello!</h1>
 		<button class="btn btn-default" onclick="mine()" >Width-meter</button>
