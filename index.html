@@ -14,13 +14,13 @@
 	<script href="text/javascript" src="script.js" ></script>
 	<script>
 		$(document).ready(function(){		
-			$(".action1").click(function(){
+			$("#action1").click(function(){
 				$("#pls").slideUp("slow",function({
 				});
 						
 			}); 
 			
-			$(".action2").click(function(){
+			$("#action2").click(function(){
 				$("#pls").slideDown("slow", function({
 					
 				});		
@@ -70,8 +70,8 @@
 	</div>
 	</div>
 	<div class="container-fluid bg-white ptb slideanim" id="lancer">
-		<button class="btn btn-default action1">ON</button>
-		<button class="btn btn-default action2">OFF</button>
+		<button class="btn btn-default " id="action1">ON</button>
+		<button class="btn btn-default" id="action1">OFF</button>
 		<h1 class="text-center mitsu-header" id="pls" >MITSUBISHI LANCER EVOLUTION</h1>
 		<div class="bg-white container margin-auto width-50pc">
 		<div class="post-image">
