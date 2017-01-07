@@ -83,32 +83,11 @@
                     <h3 class="section-subheading text-muted">Tiksliau, mano skaidrės.</h3>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
+            <div class="col-lg-12">
+				<input class="btn btn-xl" type="file" id="myFile">
+				<div class="btn btn-xl" id="upload">
+				</div>
+			</div>
         </div>
     </section> 
             
@@ -619,6 +598,43 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+	
+	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="9nlh1wfecd91ge6"></script>
+	
+	<script>
+		function myFunction() 
+		{
+			var file = document.getElementById("myFile");
+			var options = {
+				files: 
+				[
+					{'url': file, 'filename': file },
+				],
 
+				// Success is called once all files have been successfully added to the user's
+				// Dropbox, although they may not have synced to the user's devices yet.
+				success: function () {
+					// Indicate to the user that the files have been saved.
+					alert("Success! Files saved to your Dropbox.");
+				},
+
+				// Progress is called periodically to update the application on the progress
+				// of the user's downloads. The value passed to this callback is a float
+				// between 0 and 1. The progress callback is guaranteed to be called at least
+				// once with the value 1.
+				progress: function (progress) {},
+
+				// Cancel is called if the user presses the Cancel button or closes the Saver.
+				cancel: function () {},
+
+				// Error is called in the event of an unexpected response from the server
+				// hosting the files, such as not being able to find a file. This callback is
+				// also called if there is an error on Dropbox or if the user is over quota.
+				error: function (errorMessage) {}
+			};
+			var button = Dropbox.createSaveButton(options);
+			document.getElementById("upload").appendChild(button);
+					}
+	</script>
 </body>
 </html>
