@@ -135,10 +135,8 @@
 			<div id="dropbox-container"></div>
 			<div id="downloadbtn">
 				aha
-			</div>
-			
+			</div>	
 		</div>
-	
 	</section>
     <!-- Team Section -->
     <section id="team" class="bg-light-gray">
@@ -441,40 +439,42 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/parallax.min.js"></script>
 	
-	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="9nlh1wfecd91ge6">
-				options = 
-				{
-					success: function(files) {
-					  files.forEach(function(file) {
-						add_img_to_list(file);
-					  });
-					},
-					cancel: function() {
-					  //optional
-					},
-					linkType: "direct", // "preview" or "direct"
-					multiselect: true, // true or false
-				};
+	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="9nlh1wfecd91ge6"></script>
+	<script>
+	options = 
+			{
 
-				var button = Dropbox.createChooseButton(options);
-				document.getElementById("dropbox-container").appendChild(button);
+				// Required. Called when a user selects an item in the Chooser.
+				success: function(files) {
+					alert("Here's the file link: " + files[0].link)
+				},
 
-				function add_img_to_list(file) 
-				{
-				var li  = document.createElement('li');
-				var a   = document.createElement('a');
-				a.href = file.link;
-				var img = new Image();
-				var src = file.thumbnailLink;
-				src = src.replace("bounding_box=75", "bounding_box=256");
-				src = src.replace("mode=fit", "mode=crop");
-				img.src = src;
-				img.className = "th"
-				document.getElementById("img_list").appendChild(li).appendChild(a).appendChild(img);
-				}
+				// Optional. Called when the user closes the dialog without selecting a file
+				// and does not include any parameters.
+				cancel: function() {
+
+				},
+
+				// Optional. "preview" (default) is a preview link to the document for sharing,
+				// "direct" is an expiring link to download the contents of the file. For more
+				// information about link types, see Link types below.
+				linkType: "preview", // or "direct"
+
+				// Optional. A value of false (default) limits selection to a single file, while
+				// true enables multiple file selection.
+				multiselect: false, // or true
+
+				// Optional. This is a list of file extensions. If specified, the user will
+				// only be able to select files with these extensions. You may also specify
+				// file types, such as "video" or "images" in the list. For more information,
+				// see File types below. By default, all extensions are allowed.
+				extensions: ['.pdf', '.doc', '.docx'],
+			};
+			
+			var button = Dropbox.createChooseButton(options);
+			document.getElementById("dropbox-container").appendChild(button);
 	</script>
 	
 	<!-- Upload files -->
