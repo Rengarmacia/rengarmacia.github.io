@@ -1,7 +1,7 @@
 section#downloads
 {
-	padding-bottom:0 !important;
-	padding-top: 0 !important;
+	padding-bottom:0;
+	padding-top: 0;
 }
 .margin-top1
 {
@@ -10,6 +10,20 @@ section#downloads
 .mg-top{
 	padding-top: 100px;
 	color: #fed136;
+}
+.form-textbox1 {
+  margin-bottom: 25px;
+	border-radius: 4px;
+  padding: 20px;
+  height: auto;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:14px;
+}
+.form-textbox1:focus {
+  border-color: #fed136;
+  box-shadow: none;
 }
 /*!
  * Start Bootstrap - Agency v3.3.7+1 (http://startbootstrap.com/template-overviews/agency)
