@@ -114,9 +114,13 @@
 		</script>
 	</form>
     </section> 
-	<!-- Download section-->
+	
+	<!-- Downloads section-->
 	<section id="downloads">
-		<div class="container text-center">
+		<div class="parallax-container" data-parallax="scroll" data-position="top"
+	data-bleed="10" data-image-src="img/business.jpg" data-natural-width="4752" 
+	data-natural-height="2985" style="height:600px;">
+		<div class="text-center mg-top">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Downloads</h2>
@@ -125,14 +129,21 @@
             </div>
         </div>
 		<div class="text-center">
-			<button id="downloadbtn" onlick="download()" class="btn btn-xl">
+			<button  onclick="download()" class="btn btn-xl">
 				Download
 			</button>
+			<button class="btn btn-xl">
+				1Download
+			</button>
+			<div id="downloadbtn">
+				aha
+			</div>
 			<script>
 			function download()
 			{
-				Dropbox.choose(options);
-				options = 
+				var button = Dropbox.createChooseButton(options);
+				document.getElementById("downloadbtn").appendChild(button);
+				/*options = 
 				{
 					success: function(files) {
 						document.getElementById("downloadbtn").innerHTML = files[0].link;
@@ -148,10 +159,34 @@
 					// Optional. A value of false (default) limits selection to a single file, while
 					// true enables multiple file selection.
 					multiselect: false, // or true
+				};*/
+				options = 
+				{
+
+					// Required. Called when a user selects an item in the Chooser.
+					success: function(files) {
+						alert("Here's the file link: " + files[0].link)
+					},
+
+					// Optional. Called when the user closes the dialog without selecting a file
+					// and does not include any parameters.
+					cancel: function() {
+
+					},
+
+					// Optional. "preview" (default) is a preview link to the document for sharing,
+					// "direct" is an expiring link to download the contents of the file. For more
+					// information about link types, see Link types below.
+					linkType: "preview", // or "direct"
+
+					// Optional. A value of false (default) limits selection to a single file, while
+					// true enables multiple file selection.
+					multiselect: false, // or true
 				};
 			}
 			</script>
 		</div>
+	
 	</section>
     <!-- Team Section -->
     <section id="team" class="bg-light-gray">
@@ -454,8 +489,10 @@
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 	
-	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="9nlh1wfecd91ge6"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/parallax.min.js"></script>
 	
+	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="9nlh1wfecd91ge6"></script>
 	<!-- Upload files -->
 	<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.16379" rel="stylesheet" type="text/css" />
 	<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.16379" />
