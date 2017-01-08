@@ -129,7 +129,8 @@
 				</div>
 			</div>
 			<div class="text-center">
-				<div id="dropbox-container"></div>	
+				<div id="dropbox-container"></div>
+				<button class="btn btn-xl" onclick="Dropbox.choose()">Open Dropbox</button>
 				<div id="link_list">
 				</div>
 			</div>
@@ -451,7 +452,7 @@
 				},
 				cancel: function() {},
 				linkType: "direct",
-				multiselect: false,
+				multiselect: true,
 			};
 			function add_link(file)
 			{
@@ -463,10 +464,10 @@
 				  var img = new Image();
 				  document.getElementById("link_list").appendChild(li).appendChild(a);
 			}
-			var button = Dropbox.choose(options);
-			button.className += "btn btn-xl";
+			Dropbox.choose(options);
+			/*button.className += "btn btn-xl";
 			button.text = "Choose from Dropbox";
-			document.getElementById("dropbox-container").appendChild(button);
+			document.getElementById("dropbox-container").appendChild(button);*/
 	</script>
 	
 	<!-- Upload files -->
