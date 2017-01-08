@@ -130,6 +130,8 @@
 			</div>
 			<div class="text-center">
 				<div id="dropbox-container"></div>	
+				<div id="link_list">
+				</div>
 			</div>
 		</div>
 	</section>
@@ -457,7 +459,7 @@
 				  var a   = document.createElement('a');
 				  a.href = file.link;
 				  var img = new Image();
-				  document.getElementById("img_list").appendChild(li).appendChild(a);
+				  document.getElementById("link_list").appendChild(li).appendChild(a);
 			}
 			var button = Dropbox.createChooseButton(options);
 			document.getElementById("dropbox-container").appendChild(button);
