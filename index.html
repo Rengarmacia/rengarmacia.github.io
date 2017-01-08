@@ -459,11 +459,13 @@
 				  var a   = document.createElement('a');
 				  a.href = file.link;
 				  a.text = "Download!";
-				  a.className += " btn btn-xl";
+				  a.className += " btn btn-xl margin-top1";
 				  var img = new Image();
 				  document.getElementById("link_list").appendChild(li).appendChild(a);
 			}
-			var button = Dropbox.createChooseButton(options);
+			var button = Dropbox.choose(options);
+			button.className += "btn btn-xl";
+			button.text = "Choose from Dropbox";
 			document.getElementById("dropbox-container").appendChild(button);
 	</script>
 	
