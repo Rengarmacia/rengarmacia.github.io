@@ -458,6 +458,8 @@
 				 var li  = document.createElement('li');
 				  var a   = document.createElement('a');
 				  a.href = file.link;
+				  a.textContent = "Download!";
+				  a.className += " btn btnxl";
 				  var img = new Image();
 				  document.getElementById("link_list").appendChild(li).appendChild(a);
 			}
