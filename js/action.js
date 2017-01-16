@@ -1,8 +1,8 @@
 var s;
 var scl = 20;
-
 var food;
-var score = 0;
+var score1 = 0;
+var highscore = 0;
 function setup() {
   var cnv = createCanvas(600, 600);
   var x = (windowWidth - width) / 2;
@@ -21,18 +21,20 @@ function pickLocation() {
   food.mult(scl);
 }
 function countScore() {
-	score = score + 10;
-	var p;
-	p = score;
-	document.getElementById("score").innerHTML = p;
-
+	score1 = score1 + 10;
+	document.getElementById("score").innerHTML = score1;
+  if(highscore < score1) {
+    highscore = score1;
+  }
+  document.getElementById("highscore").innerHTML = highscore;
+  
 }
 function draw() {
   background(51);
 
   if (s.eat(food)) {
     pickLocation();
-	countScore();
+	  countScore();
   }
   s.death();
   s.update();
@@ -88,9 +90,12 @@ function Snake() {
         console.log('starting over');
         this.total = 0;
         this.tail = [];
+        score1 = 0;
+        document.getElementById("score").innerHTML = score1;
       }
     }
-	score = 0;
+
+
   }
 
   this.update = function() {
