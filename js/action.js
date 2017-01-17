@@ -4,7 +4,9 @@ var food;
 var score1 = 0;
 var highscore = 0;
 function setup() {
-  var cnv = createCanvas(windowWidth, windowHeight);
+  var canvas_Width = windowWidth - (windowWidth % 2);
+  var canvas_Height = windowHeight - (windowHeight % 2);
+  var cnv = createCanvas(canvas_Width, canvas_Height);
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
