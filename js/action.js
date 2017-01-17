@@ -3,6 +3,7 @@ var scl = 20;
 var food;
 var score1 = 0;
 var highscore = 0;
+
 function setup() {
   var canvas_Width = windowWidth - (windowWidth % 2);
   var canvas_Height = windowHeight - (windowHeight % 2);
@@ -10,6 +11,7 @@ function setup() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
+  cnv.className = "canvas123";
   s = new Snake();
   frameRate(10);
   pickLocation();
@@ -24,7 +26,7 @@ function pickLocation() {
 }
 function countScore() {
 	score1 = score1 + 10;
-	document.getElementById("score").innerHTML = score1;
+	//document.getElementById("score").innerHTML = score1;
   if(highscore < score1) {
     highscore = score1;
   }
@@ -36,7 +38,7 @@ function draw() {
 
   if (s.eat(food)) {
     pickLocation();
-	  countScore();
+	 countScore();
   }
   s.death();
   s.update();
@@ -58,6 +60,21 @@ function keyPressed() {
     s.dir(-1, 0);
   }
 }
+var myElement = document.getElementById("defaultCanvas0");
+var mc = new Hammer(myElement);
+mc.on(" panright", function() {
+  s.dir(1, 0);
+});
+mc.on(" panleft", function() {
+  s.dir(-1, 0);
+});
+mc.on(" panup", function() {
+  s.dir(0, -1);
+});
+mc.on(" pandown", function() {
+  s.dir(0, 1);
+});
+/*
   $(document).on("vmouseup", function(){
     s.dir(0, -1);
   });
@@ -69,7 +86,7 @@ function keyPressed() {
   });
   $(document).on("vmouseleft", function(){
     s.dir(-1, 0);
-  });
+  });*/
 function Snake() {
   this.x = 0;
   this.y = 0;
@@ -104,7 +121,6 @@ function Snake() {
         this.total = 0;
         this.tail = [];
         score1 = 0;
-        document.getElementById("score").innerHTML = score1;
       }
     }
 
