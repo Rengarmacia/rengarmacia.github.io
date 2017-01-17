@@ -4,7 +4,7 @@ var food;
 var score1 = 0;
 var highscore = 0;
 function setup() {
-  var cnv = createCanvas(600, 600);
+  var cnv = createCanvas(windowWidth, windowHeight);
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
@@ -56,7 +56,18 @@ function keyPressed() {
     s.dir(-1, 0);
   }
 }
-
+  $(document).on("vmouseup", function(){
+    s.dir(0, -1);
+  });
+  $(document).on("vmousedown", function(){
+    s.dir(0, 1);
+  });
+  $(document).on("vmouseright", function(){
+    s.dir(1, 0);
+  });
+  $(document).on("vmouseleft", function(){
+    s.dir(-1, 0);
+  });
 function Snake() {
   this.x = 0;
   this.y = 0;
