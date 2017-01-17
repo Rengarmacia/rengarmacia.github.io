@@ -62,16 +62,17 @@ function keyPressed() {
 }
 var myElement = document.getElementById("defaultCanvas0");
 var mc = new Hammer(myElement);
-mc.on(" panright", function() {
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+mc.on("panright", function() {
   s.dir(1, 0);
 });
-mc.on(" panleft", function() {
+mc.on("panleft", function() {
   s.dir(-1, 0);
 });
-mc.on(" panup", function() {
+mc.on("panup", function() {
   s.dir(0, -1);
 });
-mc.on(" pandown", function() {
+mc.on("pandown", function() {
   s.dir(0, 1);
 });
 /*
