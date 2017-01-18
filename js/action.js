@@ -5,13 +5,13 @@ var score1 = 0;
 var highscore = 0;
 
 function setup() {
-  var canvas_Width = windowWidth - (windowWidth % 2);
-  var canvas_Height = windowHeight - (windowHeight % 2);
-  var cnv = createCanvas(canvas_Width, canvas_Height);
+  //var canvas_Width = windowWidth - (windowWidth % 2);
+  //var canvas_Height = windowHeight - (windowHeight % 2);
+  var cnv = createCanvas(600, 600);
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
-  cnv.className = "canvas123";
+  //cnv.className = "canvas123";
   s = new Snake();
   frameRate(10);
   pickLocation();
@@ -62,7 +62,9 @@ function keyPressed() {
 }
 var myElement = document.getElementById("defaultCanvas0");
 var mc = new Hammer(myElement);
+
 mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
 mc.on("panright", function() {
   s.dir(1, 0);
 });
