@@ -65,6 +65,7 @@ function draw() {
   else if (l.isLevelCleared()) {
     s.levelUp();
     console.log("level up");
+    console.log(l.progress);
   }
   else {
     s.helloMessage();
