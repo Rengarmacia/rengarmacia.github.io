@@ -14,7 +14,7 @@ function preload() {
 }
 function setup() {
   createCanvas(800, 800);
-  p = new Player();
+  p = new Player(playerImg);
   s = new StartMenu();
   e.push(new Enemy(img));
   ellipseMode(CENTER);
