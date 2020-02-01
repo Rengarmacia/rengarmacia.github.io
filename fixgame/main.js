@@ -4,7 +4,7 @@ let e = [];
 let score = 0;
 let img;
 function preload() {
-  img = loadImage('mine.png');
+  img = loadImage('mine-1.png');
 }
 function setup() {
   createCanvas(800, 800);
