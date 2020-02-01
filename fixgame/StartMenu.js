@@ -58,8 +58,7 @@ class StartMenu {
       l.falseOn();
     }
   }
-  gameOver()
-  {
+  gameOver() {
     this.gameOverBool = true;
     this.start = false;
     l.gameOver();

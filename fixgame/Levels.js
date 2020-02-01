@@ -41,6 +41,15 @@ class Levels {
     createEnemy(enemyImg);
     this.spawned = true;
   }
+  level3_init() {
+    s.addReward(2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg3);
+  }
+
   spawn() {
     if(!this.spawned) {
       this.levelCleared = false;

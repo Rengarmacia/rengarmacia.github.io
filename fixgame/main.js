@@ -8,6 +8,8 @@ let shooting = true;
 // Enemies
 let e = [];
 let enemyImg;
+let enemyImg2;
+let enemyImg3;
 // Menu
 let s;
 let score = 0;
@@ -17,6 +19,8 @@ let heartImg;
 let l;
 function preload() {
   enemyImg = loadImage('mine-1.png');
+  enemyImg2 = loadImage('ships/Alien-Frigate.png');
+  enemyImg3 = loadImage('ships/Alien-Scout.png');
   bgImg = loadImage('bkgd_0.jpg');
   playerImg = loadImage('Alien-Cruiser.png');
   beamImg = loadImage('beam.png');
