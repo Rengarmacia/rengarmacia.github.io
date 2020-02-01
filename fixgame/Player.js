@@ -60,7 +60,7 @@ class Player {
   }
   returnX()
   {
-    return this.x + this.size/2;
+    return this.x;
   }
   returnY()
   {
