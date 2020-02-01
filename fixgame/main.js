@@ -54,11 +54,13 @@ function draw() {
   if(shooting)
   {
     shooting_time++;
+    console.log(shooting_time, shooting);
   }
   if(shooting_time >= 30)
   {
     shooting_time = 0;
     shooting = !shooting;
+    console.log(shooting_time, shooting);
   }
 }
 function keyPressed()
@@ -74,6 +76,7 @@ function mousePressed()
   {
     shooting = !shooting;
     p.pewpew();
+    console.log(shooting_time, shooting);
   }
 
   if(!s.isStarted())
