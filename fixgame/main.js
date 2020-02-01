@@ -77,13 +77,14 @@ function keyPressed()
 }
 function mousePressed()
 {
-  if(shooting_time == 0 && !shooting)
+
+
+  if(!s.isStarted())
+    s.buttonPressed();
+  else if(shooting_time == 0 && !shooting)
   {
     shooting = !shooting;
     p.pewpew();
     console.log(shooting_time, shooting);
   }
-
-  if(!s.isStarted())
-    s.buttonPressed();
 }
