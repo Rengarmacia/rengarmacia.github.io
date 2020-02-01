@@ -1,7 +1,8 @@
 let screen = 800;
 class Enemy {
-	constructor()
+	constructor(img)
 	{
+		this.img = img;
 		this.x = random(100, 700);
 		this.y = random(50, 350);
 		this.dirx = random(0, 5);
@@ -41,7 +42,8 @@ class Enemy {
 		this.bombTimer = constrain(this.bombTimer, 0, 255);
 		if(this.bombTimer <= 0)
 			this.explode();
-		ellipse(this.x, this.y, this.size, this.size);
+		image(this.img, this.x, this.y, this.size, this.size);
+		// ellipse(this.x, this.y, this.size, this.size);
 	}
 	isHit(laserX, laserY)
 	{

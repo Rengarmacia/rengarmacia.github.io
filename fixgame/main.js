@@ -10,7 +10,7 @@ function setup() {
   createCanvas(800, 800);
   p = new Player();
   s = new StartMenu();
-  e.push(new Enemy());
+  e.push(new Enemy(img));
   ellipseMode(CENTER);
 }
 
@@ -54,7 +54,7 @@ function keyPressed()
 {
   if(key =='a')
   {
-    e.push(new Enemy());
+    e.push(new Enemy(img));
   }
 }
 function mousePressed()
