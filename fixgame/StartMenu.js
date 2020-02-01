@@ -2,8 +2,7 @@ let SIZE = 800;
 let LINEHEIGHT = 20;
 class StartMenu {
 
-  constructor()
-  {
+  constructor() {
     this.x1 = SIZE/2;
     this.y1 = SIZE/2 - LINEHEIGHT;
     this.start = false;
@@ -12,22 +11,20 @@ class StartMenu {
     this.gameOverBool = false;
     this.parts = 0;
   }
-  helloMessage()
-  {
+  helloMessage() {
     fill(255);
     textAlign(CENTER);
     text("We believe that not only items can be fixed, but also people", this.x1, this.y1);
     text("Therefore we proudly present HappinessBeam3000", this.x1, this.y1 + LINEHEIGHT);
     text("OMAEEE!", this.x1, this.y1 + 2 * LINEHEIGHT );
   }
-  button(){
+  button() {
     fill(255);
     rect(this.x1 - this.rectSize/2, this.y1 + 3 * LINEHEIGHT, this.rectSize, this.rectSize/2);
     fill(0);
     text("Start", this.x1, this.y1 + 4*LINEHEIGHT + 5);
   }
-  buttonPressed()
-  {
+  buttonPressed() {
     if(mouseX > this.x1 - this.rectSize/2 && mouseX < this.x1 + this.rectSize/2
       && mouseY > this.y1 + 3 * LINEHEIGHT && mouseY < this.y1 + 5 * LINEHEIGHT) {
         this.start = true;
@@ -36,13 +33,9 @@ class StartMenu {
         l.falseLevelCleared();
         l.spawn();
         l.trueOn();
-        if(this.gameOverBool) {
-          window.location.reload(false);
-        }
       }
   }
-  isStarted()
-  {
+  isStarted() {
     return this.start;
   }
   ui() {
@@ -57,8 +50,7 @@ class StartMenu {
     //text(this.health, LINEHEIGHT, SIZE - LINEHEIGHT);
 
   }
-  minusHealth()
-  {
+  minusHealth() {
     this.health--;
     if(this.health <= 0)
     {
@@ -70,18 +62,17 @@ class StartMenu {
   {
     this.gameOverBool = true;
     this.start = false;
+    l.gaveOver();
     this.button();
     fill(255);
     text("GAME OVER", this.x1, this.y1);
   }
-  isGameOver()
-  {
+  isGameOver() {
     return this.gameOverBool;
   }
-  stop(){
+  stop() {
       this.start = false;
   }
-
   levelUp() {
     this.button();
     fill(255);

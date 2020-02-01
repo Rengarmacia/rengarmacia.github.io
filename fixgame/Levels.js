@@ -69,4 +69,10 @@ class Levels {
       // wait for mygtukas
     }
   }
+  gameOver() {
+    this.level = 1;
+    this.levelCleared = true;
+    this.spawned = false;
+    this.on = false;
+  }
 }
