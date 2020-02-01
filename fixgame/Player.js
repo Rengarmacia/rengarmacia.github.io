@@ -37,8 +37,8 @@ class Player {
     if(this.timer < 30)
     {
       strokeWeight(this.timer/8);
-      line(this.x + this.size/2, (25 - this.timer)*15 + 100, this.x + this.size/2, (25 - this.timer)*15);
-      this.laserY = (25 - this.timer)*15;
+      line(this.x + this.size/2, (25 - this.timer)*15 + 100, this.x + this.size/2, this.y - this.timer*25);
+      this.laserY = this.y - this.timer*25;
       strokeWeight(1);
       this.timer++;
     }
