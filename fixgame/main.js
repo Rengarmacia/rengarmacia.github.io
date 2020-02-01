@@ -1,27 +1,34 @@
+// Player
 let p;
-let s;
-let e = [];
-let score = 0;
-let img;
+let playerImg;
+let beamImg;
+// Player weapon
 let shooting_time = 0;
 let shooting = false;
-let playerImg;
+// Enemies
+let e = [];
+let enemyImg;
+// Menu
+let s;
+let score = 0;
 let bgImg;
-let beamImg;
+
 function preload() {
-  img = loadImage('mine-1.png');
+  enemyImg = loadImage('mine-1.png');
   bgImg = loadImage('bkgd_0.jpg');
   playerImg = loadImage('Alien-Cruiser.png');
   beamImg = loadImage('beam.png');
 }
+
 function setup() {
   createCanvas(800, 800);
-  p = new Player(playerImg, beamImg);
-  s = new StartMenu();
-  e.push(new Enemy(img));
   ellipseMode(CENTER);
   imageMode(CENTER);
   angleMode(DEGREES);
+  // create all objects
+  p = new Player(playerImg, beamImg);
+  s = new StartMenu();
+  e.push(new Enemy(enemyImg));
 }
 
 function draw() {
@@ -42,7 +49,6 @@ function draw() {
       }
       if(el.isExploded())
       {
-        console.log("exploded");
         e.splice( e.indexOf(el), 1 );
         score -= 100;
         s.minusHealth();
@@ -61,13 +67,11 @@ function draw() {
   if(shooting)
   {
     shooting_time++;
-    console.log(shooting_time, shooting);
   }
   if(shooting_time >= 30)
   {
     shooting_time = 0;
-    shooting = !shooting;
-    console.log(shooting_time, shooting);
+    flip_shooting();
   }
 }
 function keyPressed()
@@ -89,7 +93,6 @@ function mousePressed()
   {
     shooting = !shooting;
     p.pewpew();
-    console.log(shooting_time, shooting);
   }
 }
 function flip_shooting()
