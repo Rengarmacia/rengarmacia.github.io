@@ -37,7 +37,7 @@ class Enemy {
 	}
 	display()
 	{
-		fill(255, this.bombTimer,  this.bombTimer);
+		tint(255, this.bombTimer,  this.bombTimer);
 		this.bombTimer -= 1;
 		this.bombTimer = constrain(this.bombTimer, 0, 255);
 		if(this.bombTimer <= 0)
