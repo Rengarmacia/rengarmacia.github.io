@@ -72,7 +72,7 @@ function keyPressed()
 }
 function mousePressed()
 {
-  if(shooting_time = 0 && !shooting)
+  if(shooting_time == 0 && !shooting)
   {
     shooting = !shooting;
     p.pewpew();
