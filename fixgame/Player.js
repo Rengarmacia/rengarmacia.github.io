@@ -1,7 +1,7 @@
  let easing = 0.05;
 class Player {
 
-  constructor(img)
+  constructor(player)
   {
     this.size = 40;
     this.x = 20;
@@ -16,7 +16,7 @@ class Player {
     this.timer = 0;
     this.laserY = 0;
 
-    this.img = img;
+    this.img = player;
   }
   right()
   {
