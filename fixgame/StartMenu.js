@@ -10,6 +10,7 @@ class StartMenu {
     this.health = 3;
     this.gameOverBool = false;
     this.parts = 0;
+    this.winMessage = "";
   }
   helloMessage() {
     fill(255);
@@ -33,6 +34,18 @@ class StartMenu {
         l.falseLevelCleared();
         l.spawn();
         l.trueOn();
+      }
+  }
+  buttonPressedWin() {
+    if(mouseX > this.x1 - this.rectSize/2 && mouseX < this.x1 + this.rectSize/2
+      && mouseY > this.y1 + 3 * LINEHEIGHT && mouseY < this.y1 + 5 * LINEHEIGHT) {
+        if(this.parts > 40) {
+          this.winMessage = "Ship repaired, you can go home soldier!";
+        }
+        else {
+          this.winMessage = "You failed to collect the needed parts, unlucky.";
+        }
+        l.buttonPressedWin = true;
       }
   }
   isStarted() {

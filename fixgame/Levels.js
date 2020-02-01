@@ -6,6 +6,7 @@ class Levels {
       this.progress = true;
       this.on = false;
       this.won = false;
+      this.buttonPressedWin = false;
   }
   falseOn() {
     this.on = false;
@@ -107,8 +108,9 @@ class Levels {
       s.stop();
       // wait for mygtukas
     }
-    if(this.won) {
+    if(this.won && !this.buttonPressedWin) {
       image(enemyImg2, 400, 200);
+      s.button();
     }
   }
   gameOver() {

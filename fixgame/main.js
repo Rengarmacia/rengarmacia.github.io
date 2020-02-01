@@ -97,6 +97,9 @@ function mousePressed()
     s.buttonPressed();
     console.log("mousePressed activated");
   }
+  else if (l.won) {
+    s.buttonPressedWin();
+  }
   else if(shooting_time == 0 && !shooting)
   {
     shooting = !shooting;
