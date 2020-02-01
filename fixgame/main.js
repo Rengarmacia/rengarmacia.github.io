@@ -92,13 +92,14 @@ function keyPressed()
 }
 function mousePressed()
 {
-  if(!s.isStarted() || l.isLevelCleared())
+  if(!s.isStarted() || l.isLevelCleared() && !l.won)
   {
     s.buttonPressed();
     console.log("mousePressed activated");
   }
   else if (l.won) {
     s.buttonPressedWin();
+    console.log("mousePressed activated victory");
   }
   else if(shooting_time == 0 && !shooting)
   {

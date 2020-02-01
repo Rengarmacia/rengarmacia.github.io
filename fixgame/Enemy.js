@@ -59,8 +59,8 @@ class Enemy {
 	}
 	explode()
 	{
-		this.size += 5;
-		if(this.size >= 200)
+		this.size += random(0, 3);
+		if(this.size >= random(200, 300))
 		{
 			this.exploded = true;
 		}
