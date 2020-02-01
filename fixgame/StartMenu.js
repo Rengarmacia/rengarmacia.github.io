@@ -59,6 +59,7 @@ class StartMenu {
     this.gameOverBool = true;
     this.start = false;
     this.button();
+    fill(255);
     text("GAME OVER", this.x1, this.y1);
   }
   isGameOver()
