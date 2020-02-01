@@ -2,6 +2,7 @@ class Levels {
   constructor() {
       this.level = 1;
       this.levelCleared = false;
+      this.spawned = false;
   }
   showLevel() {
     return this.level;
@@ -10,6 +11,7 @@ class Levels {
     createEnemy(enemyImg);
     createEnemy(enemyImg);
     createEnemy(enemyImg);
+    this.spawned = true;
   }
   level2_init() {
     s.addReward(1);
@@ -17,6 +19,7 @@ class Levels {
     createEnemy(enemyImg);
     createEnemy(enemyImg);
     createEnemy(enemyImg);
+    this.spawned = true;
   }
   levelCheck() {
     if(e.length <= 0) {
@@ -27,9 +30,10 @@ class Levels {
     if(this.levelCleared) {
       s.levelUp();
       this.levelCleared = false;
+      this.spawned = !this.spawned;
       this.level++;
     }
-    else {
+    else if(!this.spawned){
       switch(this.level) {
         case 1:
           this.level1_init();
