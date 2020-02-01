@@ -3,6 +3,8 @@ let s;
 let e = [];
 let score = 0;
 let img;
+let shooting_time = 0;
+let shooting = false;
 function preload() {
   img = loadImage('mine-1.png');
 }
@@ -49,7 +51,15 @@ function draw() {
     s.helloMessage();
     s.button();
   }
-
+  if(shooting)
+  {
+    shooting_time++;
+  }
+  if(shooting_time >= 30)
+  {
+    shooting_time = 0;
+    shooting = !shooting;
+  }
 }
 function keyPressed()
 {
@@ -60,6 +70,12 @@ function keyPressed()
 }
 function mousePressed()
 {
-  p.pewpew();
-  s.buttonPressed();
+  if(shooting_time = 0 && !shooting)
+  {
+    shooting = !shooting;
+    p.pewpew();
+  }
+
+  if(s.isStarted())
+    s.buttonPressed();
 }
