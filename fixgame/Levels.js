@@ -10,6 +10,9 @@ class Levels {
   isLevelCleared() {
     return this.levelCleared;
   }
+  flipLevelCleared() {
+    this.levelCleared = !this.levelCleared;
+  }
   level1_init() {
     createEnemy(enemyImg);
     createEnemy(enemyImg);
@@ -30,9 +33,8 @@ class Levels {
     }
   }
   update() {
-    if(this.levelCleared) {
+    if(this.levelCleared && this.spawned) {
       s.levelUp();
-      this.levelCleared = false;
       this.spawned = !this.spawned;
       this.level++;
     }
