@@ -36,6 +36,9 @@ class StartMenu {
         l.falseLevelCleared();
         l.spawn();
         l.trueOn();
+        if(this.gameOverBool) {
+          location.reload();
+        }
       }
   }
   isStarted()
@@ -61,13 +64,13 @@ class StartMenu {
     if(this.health <= 0)
     {
       this.gameOver();
+      l.falseOn();
     }
   }
   gameOver()
   {
     this.gameOverBool = true;
     this.start = false;
-    l.falseOn();
     this.button();
     fill(255);
     text("GAME OVER", this.x1, this.y1);
