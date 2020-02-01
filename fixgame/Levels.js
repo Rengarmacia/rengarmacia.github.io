@@ -47,7 +47,6 @@ class Levels {
         default:
           break;
       }
-
     }
     this.levelCheck();
   }

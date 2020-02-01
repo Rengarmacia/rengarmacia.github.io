@@ -38,6 +38,7 @@ function setup() {
 function draw() {
   background(220);
   image( bgImg, 400, 400);
+
   if(s.isStarted())
   {
     l.update();

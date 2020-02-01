@@ -71,7 +71,6 @@ class StartMenu {
     return this.gameOverBool;
   }
   levelUp() {
-    this.start = false;
     this.button();
     fill(255);
     text("Congratulations, continue to next level", this.x1, this.y1);
