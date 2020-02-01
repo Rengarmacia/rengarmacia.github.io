@@ -13,7 +13,7 @@ class Player {
     this.gunHeight = 10;
 
     this.isPew = false;
-    this.timer = 0;
+    this.timer = 100;
     this.laserY = 0;
     //imgs
     this.img = player;
