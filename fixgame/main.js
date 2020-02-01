@@ -12,6 +12,7 @@ let enemyImg;
 let s;
 let score = 0;
 let bgImg;
+let heartImg;
 // levels
 let l;
 function preload() {
@@ -19,6 +20,7 @@ function preload() {
   bgImg = loadImage('bkgd_0.jpg');
   playerImg = loadImage('Alien-Cruiser.png');
   beamImg = loadImage('beam.png');
+  heartImg = loadImage('heart.png')
 }
 
 function setup() {
@@ -31,7 +33,6 @@ function setup() {
   s = new StartMenu();
   l = new Levels();
   l.level1_init();
-  createEnemy();
 }
 
 function draw() {
@@ -39,6 +40,7 @@ function draw() {
   image( bgImg, 400, 400);
   if(s.isStarted())
   {
+    l.update();
     p.followMouse();
     p.display();
     for(let el of e)
@@ -81,7 +83,7 @@ function keyPressed()
 {
   if(key =='a')
   {
-    createEnemy();
+    createEnemy(enemyImg);
   }
 }
 function mousePressed()
@@ -100,7 +102,7 @@ function flip_shooting()
 {
   shooting = !shooting;
 }
-function createEnemy()
+function createEnemy(selected)
 {
-  e.push(new Enemy(enemyImg));
+  e.push(new Enemy(selected));
 }

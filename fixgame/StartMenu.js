@@ -10,6 +10,7 @@ class StartMenu {
     this.rectSize = 80;
     this.health = 3;
     this.gameOverBool = false;
+    this.parts = 0;
   }
   helloMessage()
   {
@@ -43,7 +44,10 @@ class StartMenu {
     // health
     textSize(20);
     fill(255);
-    text(this.health, LINEHEIGHT, SIZE - LINEHEIGHT);
+    for(let i = 0; i < this.heart; i++) {
+      image(heartImg, LINEHEIGHT + i * 20, SIZE - LINEHEIGHT, LINEHEIGHT, LINEHEIGHT );
+    }
+    //text(this.health, LINEHEIGHT, SIZE - LINEHEIGHT);
 
   }
   minusHealth()
@@ -65,5 +69,14 @@ class StartMenu {
   isGameOver()
   {
     return this.gameOverBool;
+  }
+  levelUp() {
+    this.start = false;
+    this.button();
+    fill(255);
+    text("Congratulations, continue to next level", this.x1, this.y1);
+  }
+  addReward(level) {
+    this.parts += level * int(random(3,7));
   }
 }

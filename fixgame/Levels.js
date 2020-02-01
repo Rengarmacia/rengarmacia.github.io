@@ -11,9 +11,42 @@ class Levels {
     createEnemy(enemyImg);
     createEnemy(enemyImg);
   }
+  level2_init() {
+    s.addReward(1);
+    createEnemy(enemyImg);
+    createEnemy(enemyImg);
+    createEnemy(enemyImg);
+    createEnemy(enemyImg);
+  }
   levelCheck() {
     if(e.length <= 0) {
       this.levelCleared = true;
+    }
+  }
+  update() {
+
+    this.levelCheck();
+
+    if(this.levelCleared) {
+      s.levelUp();
+      this.levelCleared = false;
+      this.level++;
+    }
+    else {
+      switch(e) {
+        case 1:
+          level1_init();
+          break;
+        case 2:
+          level2_init();
+          break;
+        case 3:
+          level3_init();
+          break;
+        default:
+          break;
+      }
+
     }
   }
 }
