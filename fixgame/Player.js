@@ -1,18 +1,22 @@
  let easing = 0.05;
 class Player {
 
-  constructor()
+  constructor(img)
   {
     this.size = 40;
     this.x = 20;
     this.y = 700;
+
     this.gunx = 30;
     this.guny = this.y - 10;
     this.gunWidth = 20;
     this.gunHeight = 10;
+
     this.isPew = false;
     this.timer = 0;
     this.laserY = 0;
+
+    this.img = img;
   }
   right()
   {
@@ -42,9 +46,13 @@ class Player {
       strokeWeight(1);
       this.timer++;
     }
-    fill(255);
-    rect(this.x, this.y, this.size, this.size);
-    rect(this.gunx, this.guny, this.gunWidth, this.gunHeight);
+
+    image(img, this.x, this.y, size, size)
+
+
+    // fill(255);
+    // rect(this.x, this.y, this.size, this.size);
+    // rect(this.gunx, this.guny, this.gunWidth, this.gunHeight);
   }
   pewpew()
   {

@@ -13,6 +13,7 @@ class StartMenu {
   }
   helloMessage()
   {
+    fill(255);
     textAlign(CENTER);
     text("We believe that not only items can be fixed, but also people", this.x1, this.y1);
     text("Therefore we proudly present HappinessBeam3000", this.x1, this.y1 + LINEHEIGHT);
@@ -41,7 +42,7 @@ class StartMenu {
   {
     // health
     textSize(20);
-    fill(0);
+    fill(255);
     text(this.health, LINEHEIGHT, SIZE - LINEHEIGHT);
 
   }
