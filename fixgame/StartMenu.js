@@ -45,8 +45,8 @@ class StartMenu {
     // health
     textSize(20);
     fill(255);
-    for(var i = 0; i < this.heart; i++) {
-      image(heartImg, LINEHEIGHT + i * 20, SIZE - LINEHEIGHT, LINEHEIGHT, LINEHEIGHT );
+    for(var i = 0; i < this.health; i++) {
+      image(heartImg, LINEHEIGHT + i * 20, SIZE - LINEHEIGHT, LINEHEIGHT * 2, LINEHEIGHT * 2);
       console.log("it works");
     }
     textSize(16);
@@ -73,6 +73,10 @@ class StartMenu {
   {
     return this.gameOverBool;
   }
+  stop(){
+      this.start = false;
+  }
+
   levelUp() {
     this.button();
     fill(255);

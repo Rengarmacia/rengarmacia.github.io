@@ -35,6 +35,7 @@ class Levels {
   }
   update() {
     if(this.levelCleared && this.progress) {
+      s.stop();
       this.level++;
       this.progress = false;
     }

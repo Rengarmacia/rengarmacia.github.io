@@ -64,6 +64,7 @@ function draw() {
   }
   else if (l.isLevelCleared()) {
     s.levelUp();
+    console.log("level up");
   }
   else {
     s.helloMessage();
