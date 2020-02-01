@@ -30,7 +30,7 @@ class Levels {
       this.level++;
     }
     else {
-      switch(e) {
+      switch(this.level) {
         case 1:
           level1_init();
           break;
