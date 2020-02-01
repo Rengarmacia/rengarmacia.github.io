@@ -4,6 +4,10 @@ class Levels {
       this.levelCleared = true;
       this.spawned = false;
       this.progress = true;
+      this.on = false;
+  }
+  switchOn() {
+    this.on = !this.on;
   }
   showLevel() {
     return this.level;
@@ -51,7 +55,7 @@ class Levels {
     }
   }
   update() {
-    if(e.length <= 0 && !this.levelCleared) {
+    if(e.length <= 0 && !this.levelCleared && this.on) {
       this.levelCleared = true;
       this.spawned = false;
       this.level++;
