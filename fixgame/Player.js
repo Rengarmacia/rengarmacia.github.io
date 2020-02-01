@@ -30,7 +30,7 @@ class Player {
   }
   followMouse()
   {
-    let targetX = mouseX - (this.size / 2);
+    let targetX = mouseX;
     let dx = targetX - this.x;
 
     this.x += dx * easing;
