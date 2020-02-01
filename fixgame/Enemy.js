@@ -59,7 +59,7 @@ class Enemy {
 	}
 	explode()
 	{
-		this.size += 10;
+		this.size += 5;
 		if(this.size >= 200)
 		{
 			this.exploded = true;
