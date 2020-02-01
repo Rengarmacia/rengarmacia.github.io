@@ -58,16 +58,5 @@ class Levels {
       s.stop();
       // wait for mygtukas
     }
-    // if(this.levelCleared && this.progress) {
-    //   s.stop();
-    //   this.level++;
-    //   this.progress = false;
-    // }
-    // else if(!this.spawned) {
-    //
-    // }
-    // else if(this.spawned) {
-    //   this.levelCleared = false;
-    // }
   }
 }
