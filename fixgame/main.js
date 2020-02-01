@@ -92,6 +92,7 @@ function mousePressed()
   if(!s.isStarted() || l.isLevelCleared())
   {
     s.buttonPressed();
+    console.log("mousePressed activated");
   }
   else if(shooting_time == 0 && !shooting)
   {

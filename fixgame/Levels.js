@@ -31,35 +31,45 @@ class Levels {
     createEnemy(enemyImg);
     this.spawned = true;
   }
-  levelCheck() {
-    if(e.length <= 0) {
-      this.levelCleared = true;
+  spawn() {
+    switch(this.level) {
+      case 1:
+        this.level1_init();
+        break;
+      case 2:
+        this.level2_init();
+        break;
+      case 3:
+        this.level3_init();
+        break;
+      default:
+        break;
     }
   }
   update() {
-    if(this.levelCleared && this.progress) {
-      s.stop();
+
+    if(e.length <= 0) {
+      this.levelCleared = true;
       this.level++;
-      this.progress = false;
+      s.stop();
+      // wait for mygtukas
     }
-    else if(!this.spawned) {
-      switch(this.level) {
-        case 1:
-          this.level1_init();
-          break;
-        case 2:
-          this.level2_init();
-          break;
-        case 3:
-          this.level3_init();
-          break;
-        default:
-          break;
-      }
-    }
-    else if(this.spawned) {
-      this.levelCleared = false;
-    }
-    this.levelCheck();
+
+
+
+
+
+
+    // if(this.levelCleared && this.progress) {
+    //   s.stop();
+    //   this.level++;
+    //   this.progress = false;
+    // }
+    // else if(!this.spawned) {
+    //
+    // }
+    // else if(this.spawned) {
+    //   this.levelCleared = false;
+    // }
   }
 }
