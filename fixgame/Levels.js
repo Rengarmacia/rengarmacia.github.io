@@ -14,6 +14,9 @@ class Levels {
   falseLevelCleared() {
     this.levelCleared = false;
   }
+  progressTrue(){
+    this.progress = true;
+  }
   level1_init() {
     createEnemy(enemyImg);
     createEnemy(enemyImg);
