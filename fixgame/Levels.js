@@ -16,5 +16,4 @@ class Levels {
       this.levelCleared = true;
     }
   }
-
 }
