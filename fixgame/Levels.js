@@ -24,9 +24,6 @@ class Levels {
     }
   }
   update() {
-
-    this.levelCheck();
-
     if(this.levelCleared) {
       s.levelUp();
       this.levelCleared = false;
@@ -48,5 +45,6 @@ class Levels {
       }
 
     }
+    this.levelCheck();
   }
 }
