@@ -76,6 +76,6 @@ function mousePressed()
     p.pewpew();
   }
 
-  if(s.isStarted())
+  if(!s.isStarted())
     s.buttonPressed();
 }
