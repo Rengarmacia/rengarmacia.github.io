@@ -37,7 +37,7 @@ class StartMenu {
         l.spawn();
         l.trueOn();
         if(this.gameOverBool) {
-          location.reload();
+          window.location.reload(false); 
         }
       }
   }
