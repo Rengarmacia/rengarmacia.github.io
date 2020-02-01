@@ -4,7 +4,7 @@ let playerImg;
 let beamImg;
 // Player weapon
 let shooting_time = 0;
-let shooting = false;
+let shooting = true;
 // Enemies
 let e = [];
 let enemyImg;
@@ -86,8 +86,6 @@ function mousePressed()
   if(!s.isStarted())
   {
     s.buttonPressed();
-    // disallows to fire 30 ticks into the game
-    flip_shooting();
   }
   else if(shooting_time == 0 && !shooting)
   {
