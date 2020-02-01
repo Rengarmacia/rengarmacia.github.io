@@ -28,7 +28,7 @@ function setup() {
   // create all objects
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
-  e.push(new Enemy(enemyImg));
+  createEnemy();
 }
 
 function draw() {
@@ -78,7 +78,7 @@ function keyPressed()
 {
   if(key =='a')
   {
-    e.push(new Enemy(img));
+    createEnemy();
   }
 }
 function mousePressed()
@@ -98,4 +98,8 @@ function mousePressed()
 function flip_shooting()
 {
   shooting = !shooting;
+}
+function createEnemy()
+{
+  e.push(new Enemy(enemyImg));
 }
