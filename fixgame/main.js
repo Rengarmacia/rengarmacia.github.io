@@ -32,7 +32,6 @@ function setup() {
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
   l = new Levels();
-  l.level1_init();
 }
 
 function draw() {

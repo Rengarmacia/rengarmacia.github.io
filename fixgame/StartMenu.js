@@ -37,7 +37,7 @@ class StartMenu {
         l.spawn();
         l.trueOn();
         if(this.gameOverBool) {
-          window.location.reload(false); 
+          window.location.reload(false);
         }
       }
   }
@@ -45,8 +45,7 @@ class StartMenu {
   {
     return this.start;
   }
-  ui()
-  {
+  ui() {
     // health
     textSize(20);
     fill(255);
