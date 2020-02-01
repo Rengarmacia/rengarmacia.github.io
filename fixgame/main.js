@@ -5,8 +5,12 @@ let score = 0;
 let img;
 let shooting_time = 0;
 let shooting = false;
+let playerImg;
+let bgImg;
 function preload() {
   img = loadImage('mine-1.png');
+  bgImg = loadImage('bkgd_0.png');
+  playerImg = loadImage('Alien-Cruiser.png');
 }
 function setup() {
   createCanvas(800, 800);
@@ -20,6 +24,7 @@ function setup() {
 
 function draw() {
   background(220);
+  image( bgImg, 400, 400);
   if(s.isStarted())
   {
     p.followMouse();
