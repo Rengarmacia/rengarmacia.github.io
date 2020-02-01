@@ -39,32 +39,31 @@ function draw() {
   background(220);
   image( bgImg, 400, 400);
 
-  if(s.isStarted())
-  {
+  if(s.isStarted()) {
     l.update();
     p.followMouse();
     p.display();
-    for(let el of e)
-    {
+    for(let el of e) {
       el.move();
       el.display();
-      if(el.isHit(p.returnX(), p.returnY()))
-      {
+      if(el.isHit(p.returnX(), p.returnY())) {
         e.splice( e.indexOf(el), 1 );
         score += 10;
       }
-      if(el.isExploded())
-      {
+      if(el.isExploded()) {
         e.splice( e.indexOf(el), 1 );
         score -= 100;
         s.minusHealth();
       }
     }
+    // ui on top of everything
     s.ui();
   }
-  else if (s.isGameOver())
-  {
+  else if (s.isGameOver()) {
     s.gameOver();
+  }
+  else if (l.isLevelCleared()) {
+    s.levelUp();
   }
   else {
     s.helloMessage();
