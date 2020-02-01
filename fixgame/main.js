@@ -12,6 +12,7 @@ function setup() {
   s = new StartMenu();
   e.push(new Enemy(img));
   ellipseMode(CENTER);
+  imageMode(CENTER);
   angleMode(DEGREES);
 }
 
