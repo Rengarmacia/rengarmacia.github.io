@@ -32,6 +32,7 @@ class Levels {
     this.spawned = true;
   }
   spawn() {
+    this.levelCleared = false;
     switch(this.level) {
       case 1:
         this.level1_init();
@@ -47,19 +48,12 @@ class Levels {
     }
   }
   update() {
-
-    if(e.length <= 0) {
+    if(e.length <= 0 && !this.levelCleared) {
       this.levelCleared = true;
       this.level++;
       s.stop();
       // wait for mygtukas
     }
-
-
-
-
-
-
     // if(this.levelCleared && this.progress) {
     //   s.stop();
     //   this.level++;
