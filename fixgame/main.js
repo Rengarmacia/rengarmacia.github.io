@@ -89,7 +89,7 @@ function keyPressed()
 }
 function mousePressed()
 {
-  if(!s.isStarted())
+  if(!s.isStarted() || l.isLevelCleared())
   {
     s.buttonPressed();
   }

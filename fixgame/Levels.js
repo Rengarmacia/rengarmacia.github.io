@@ -7,6 +7,9 @@ class Levels {
   showLevel() {
     return this.level;
   }
+  isLevelCleared() {
+    return this.levelCleared;
+  }
   level1_init() {
     createEnemy(enemyImg);
     createEnemy(enemyImg);
