@@ -10,8 +10,8 @@ class Levels {
   isLevelCleared() {
     return this.levelCleared;
   }
-  flipLevelCleared() {
-    this.levelCleared = !this.levelCleared;
+  falseLevelCleared() {
+    this.levelCleared = false;
   }
   level1_init() {
     createEnemy(enemyImg);

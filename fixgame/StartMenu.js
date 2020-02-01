@@ -33,7 +33,7 @@ class StartMenu {
         this.start = true;
         this.gameOverBool = false;
         this.health = 3;
-        l.flipLevelCleared();
+        l.falseLevelCleared();
       }
   }
   isStarted()
