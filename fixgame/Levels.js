@@ -49,7 +49,23 @@ class Levels {
     createEnemy(enemyImg2);
     createEnemy(enemyImg3);
   }
-
+  level4_init() {
+    s.addReward(3);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg3);
+    createEnemy(enemyImg3);
+    createEnemy(enemyImg3);
+  }
+  level5_init() {
+    s.addReward(4);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg2);
+    createEnemy(enemyImg3);
+    createEnemy(enemyImg3);
+  }
   spawn() {
     if(!this.spawned) {
       this.levelCleared = false;
@@ -62,6 +78,12 @@ class Levels {
           break;
         case 3:
           this.level3_init();
+          break;
+        case 4:
+          this.level4_init();
+          break;
+        case 5:
+          this.level5_init();
           break;
         default:
           break;
