@@ -79,14 +79,20 @@ function keyPressed()
 }
 function mousePressed()
 {
-
-
   if(!s.isStarted())
+  {
     s.buttonPressed();
+    // disallows to fire 30 ticks into the game
+    flip_shooting();
+  }
   else if(shooting_time == 0 && !shooting)
   {
     shooting = !shooting;
     p.pewpew();
     console.log(shooting_time, shooting);
   }
+}
+function flip_shooting()
+{
+  shooting = !shooting;
 }
