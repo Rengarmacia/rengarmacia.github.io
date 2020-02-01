@@ -4,7 +4,7 @@ let e = [];
 let score = 0;
 let img;
 function preload() {
-  img = loadImage('https://crossorigin.me/https://cdn0.iconfinder.com/data/icons/weaponry-solid-collection/60/Weaponary_-_Solid_-_021_-_Mine-512.png');
+  img = loadImage('mine.jpg');
 }
 function setup() {
   createCanvas(800, 800);
