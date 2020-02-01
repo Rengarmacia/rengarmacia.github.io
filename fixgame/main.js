@@ -9,7 +9,7 @@ let playerImg;
 let bgImg;
 function preload() {
   img = loadImage('mine-1.png');
-  bgImg = loadImage('bkgd_0.png');
+  bgImg = loadImage('bkgd_0.jpg');
   playerImg = loadImage('Alien-Cruiser.png');
 }
 function setup() {
