@@ -12,7 +12,8 @@ let enemyImg;
 let s;
 let score = 0;
 let bgImg;
-
+// levels
+let l;
 function preload() {
   enemyImg = loadImage('mine-1.png');
   bgImg = loadImage('bkgd_0.jpg');
@@ -28,6 +29,8 @@ function setup() {
   // create all objects
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
+  l = new Levels();
+  l.level1_init();
   createEnemy();
 }
 
