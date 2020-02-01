@@ -6,8 +6,14 @@ class Levels {
       this.progress = true;
       this.on = false;
   }
-  switchOn() {
-    this.on = !this.on;
+  falseOn() {
+    this.on = false;
+  }
+  trueOn() {
+    this.on = true;
+  }
+  returnOn() {
+    return this.on;
   }
   showLevel() {
     return this.level;

@@ -62,7 +62,7 @@ function draw() {
   else if (s.isGameOver()) {
     s.gameOver();
   }
-  else if (l.isLevelCleared()) {
+  else if (l.isLevelCleared() && l.returnOn()) {
     s.levelUp();
     console.log("level up");
   }

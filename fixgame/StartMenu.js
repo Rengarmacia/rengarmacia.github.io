@@ -35,7 +35,7 @@ class StartMenu {
         this.health = 3;
         l.falseLevelCleared();
         l.spawn();
-        l.switchOn();
+        l.trueOn();
       }
   }
   isStarted()
