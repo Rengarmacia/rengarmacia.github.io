@@ -66,6 +66,10 @@ class Levels {
     createEnemy(enemyImg3);
     createEnemy(enemyImg3);
   }
+  level6_init() {
+    this.levelCleared = true;
+    image(enemyImg2, 400, 200);
+  }
   spawn() {
     if(!this.spawned) {
       this.levelCleared = false;
@@ -84,6 +88,9 @@ class Levels {
           break;
         case 5:
           this.level5_init();
+          break;
+        case 6:
+          this.level6_init();
           break;
         default:
           break;

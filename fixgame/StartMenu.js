@@ -14,9 +14,9 @@ class StartMenu {
   helloMessage() {
     fill(255);
     textAlign(CENTER);
-    text("We believe that not only items can be fixed, but also people", this.x1, this.y1);
-    text("Therefore we proudly present HappinessBeam3000", this.x1, this.y1 + LINEHEIGHT);
-    text("OMAEEE!", this.x1, this.y1 + 2 * LINEHEIGHT );
+    text("Your fleet was destroyed in a space battle and you were captured as a prisoner.", this.x1, this.y1);
+    text("However, you managed to free yourself and steal one of their ships.", this.x1, this.y1 + LINEHEIGHT);
+    text("Your mission is to get through enemy defences and repair what's left of your ship", this.x1, this.y1 + 2 * LINEHEIGHT );
   }
   button() {
     fill(255);
@@ -44,7 +44,6 @@ class StartMenu {
     fill(255);
     for(var i = 0; i < this.health; i++) {
       image(heartImg, LINEHEIGHT + i * 20, SIZE - LINEHEIGHT, LINEHEIGHT * 2, LINEHEIGHT * 2);
-      console.log("it works");
     }
     text("Parts: ", SIZE - LINEHEIGHT * 3, SIZE - LINEHEIGHT);
     text(this.parts, SIZE - LINEHEIGHT, SIZE - LINEHEIGHT);
