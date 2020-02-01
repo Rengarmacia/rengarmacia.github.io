@@ -46,7 +46,7 @@ class StartMenu {
       image(heartImg, LINEHEIGHT + i * 20, SIZE - LINEHEIGHT, LINEHEIGHT * 2, LINEHEIGHT * 2);
       console.log("it works");
     }
-    text("Parts: ", SIZE - LINEHEIGHT * 2, SIZE - LINEHEIGHT);
+    text("Parts: ", SIZE - LINEHEIGHT * 3, SIZE - LINEHEIGHT);
     text(this.parts, SIZE - LINEHEIGHT, SIZE - LINEHEIGHT);
     textSize(16);
     //text(this.health, LINEHEIGHT, SIZE - LINEHEIGHT);
