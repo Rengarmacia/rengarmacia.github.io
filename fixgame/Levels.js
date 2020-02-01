@@ -1,7 +1,7 @@
 class Levels {
   constructor() {
       this.level = 1;
-      this.levelCleared = false;
+      this.levelCleared = true;
       this.spawned = false;
       this.progress = true;
   }
@@ -32,24 +32,28 @@ class Levels {
     this.spawned = true;
   }
   spawn() {
-    this.levelCleared = false;
-    switch(this.level) {
-      case 1:
-        this.level1_init();
-        break;
-      case 2:
-        this.level2_init();
-        break;
-      case 3:
-        this.level3_init();
-        break;
-      default:
-        break;
+    if(!this.spawned) {
+      this.levelCleared = false;
+      switch(this.level) {
+        case 1:
+          this.level1_init();
+          break;
+        case 2:
+          this.level2_init();
+          break;
+        case 3:
+          this.level3_init();
+          break;
+        default:
+          break;
+      }
+      this.spawned = true;
     }
   }
   update() {
     if(e.length <= 0 && !this.levelCleared) {
       this.levelCleared = true;
+      this.spawned = false;
       this.level++;
       s.stop();
       // wait for mygtukas
