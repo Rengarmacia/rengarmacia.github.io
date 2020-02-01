@@ -47,7 +47,7 @@ class Player {
       this.timer++;
     }
 
-    image(img, this.x, this.y, size, size)
+    image(img, this.x, this.y, this.size, this.size)
 
 
     // fill(255);
