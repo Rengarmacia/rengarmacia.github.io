@@ -7,14 +7,16 @@ let shooting_time = 0;
 let shooting = false;
 let playerImg;
 let bgImg;
+let beamImg;
 function preload() {
   img = loadImage('mine-1.png');
   bgImg = loadImage('bkgd_0.jpg');
   playerImg = loadImage('Alien-Cruiser.png');
+  beamImg = loadImage('beam.png');
 }
 function setup() {
   createCanvas(800, 800);
-  p = new Player(playerImg);
+  p = new Player(playerImg, beamImg);
   s = new StartMenu();
   e.push(new Enemy(img));
   ellipseMode(CENTER);

@@ -1,7 +1,7 @@
  let easing = 0.05;
 class Player {
 
-  constructor(player)
+  constructor(player, beam)
   {
     this.size = 150;
     this.x = 20;
@@ -15,8 +15,13 @@ class Player {
     this.isPew = false;
     this.timer = 0;
     this.laserY = 0;
-
+    //imgs
     this.img = player;
+    this.beam = beam;
+    //beam
+    this.beamWidth = 18;
+    this.beamL = 0;
+
   }
   right()
   {
@@ -40,10 +45,11 @@ class Player {
   {
     if(this.timer < 30)
     {
-      strokeWeight((30 - this.timer)/5);
-      line(this.x,  constrain(this.y - this.timer*25 + 100, 0, 700), this.x, this.y - this.timer*25);
+      // strokeWeight((30 - this.timer)/5);
       this.laserY = this.y - this.timer*25;
-      strokeWeight(1);
+      this.beamL = this.y - this.laserY;
+      image(this.beam, this.x,  this.y - this.timer*25, this.beamWidth, this.beamL);
+      // strokeWeight(1);
       this.timer++;
     }
 
