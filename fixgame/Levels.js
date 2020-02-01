@@ -3,6 +3,7 @@ class Levels {
       this.level = 1;
       this.levelCleared = false;
       this.spawned = false;
+      this.progress = true;
   }
   showLevel() {
     return this.level;
@@ -33,12 +34,12 @@ class Levels {
     }
   }
   update() {
-    if(this.levelCleared && this.spawned) {
+    if(this.levelCleared && this.progress) {
       s.levelUp();
-      this.spawned = !this.spawned;
       this.level++;
+      this.progress = false;
     }
-    else if(!this.spawned){
+    else if(!this.spawned) {
       switch(this.level) {
         case 1:
           this.level1_init();
@@ -52,6 +53,9 @@ class Levels {
         default:
           break;
       }
+    }
+    else if(this.spawned) {
+      this.levelCleared = false;
     }
     this.levelCheck();
   }
