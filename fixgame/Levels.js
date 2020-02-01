@@ -5,6 +5,7 @@ class Levels {
       this.spawned = false;
       this.progress = true;
       this.on = false;
+      this.won = false;
   }
   falseOn() {
     this.on = false;
@@ -68,7 +69,7 @@ class Levels {
   }
   level6_init() {
     this.levelCleared = true;
-    image(enemyImg2, 400, 200);
+    this.won = true;
   }
   spawn() {
     if(!this.spawned) {
@@ -105,6 +106,9 @@ class Levels {
       this.level++;
       s.stop();
       // wait for mygtukas
+    }
+    if(this.won) {
+      image(enemyImg2, 400, 200);
     }
   }
   gameOver() {
