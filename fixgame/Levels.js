@@ -32,13 +32,13 @@ class Levels {
     else {
       switch(this.level) {
         case 1:
-          level1_init();
+          this.level1_init();
           break;
         case 2:
-          level2_init();
+          this.level2_init();
           break;
         case 3:
-          level3_init();
+          this.level3_init();
           break;
         default:
           break;
