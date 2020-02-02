@@ -109,11 +109,10 @@ class Levels {
       s.stop();
       // wait for mygtukas
     }
+    if(this.won && this.showShip) {
+      image(enemyImg2, 400, 200);
+    }
     if(this.won && !this.buttonPressedWin) {
-      if(this.showShip) {
-        image(enemyImg2, 400, 200);
-      }
-
       s.buttonWin();
       if(!s.buttonPressedWin) {
         text("You see your ship floating in the distance...", 400, 400);
