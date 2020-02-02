@@ -17,14 +17,22 @@ let bgImg;
 let heartImg;
 // levels
 let l;
+// music
+let song;
+let slider;
+
 function preload() {
   enemyImg = loadImage('mine-1.png');
   enemyImg2 = loadImage('ships/Alien-Frigate.png');
   enemyImg3 = loadImage('ships/Alien-Scout.png');
+
   bgImg = loadImage('bkgd_0.jpg');
   playerImg = loadImage('Alien-Cruiser.png');
   beamImg = loadImage('beam.png');
   heartImg = loadImage('heart.png')
+
+  song = loadSound("bensound-slowmotion.mp3");
+
 }
 
 function setup() {
@@ -32,6 +40,9 @@ function setup() {
   ellipseMode(CENTER);
   imageMode(CENTER);
   angleMode(DEGREES);
+  // music
+  slider = createSlider(0, 1, 0.5, 0.1);
+
   // create all objects
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
@@ -41,6 +52,8 @@ function setup() {
 function draw() {
   background(220);
   image( bgImg, 400, 400);
+
+  song.setVolume(slider.value());
 
   if(s.isStarted()) {
     l.update();
