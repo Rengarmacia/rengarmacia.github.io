@@ -20,7 +20,7 @@ let l;
 // music
 let song;
 let slider;
-
+let songStarted = false;
 function preload() {
   enemyImg = loadImage('mine-1.png');
   enemyImg2 = loadImage('ships/Alien-Frigate.png');
@@ -40,8 +40,6 @@ function setup() {
   ellipseMode(CENTER);
   imageMode(CENTER);
   angleMode(DEGREES);
-  // music
-  song.play();
   // create all objects
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
@@ -118,6 +116,9 @@ function mousePressed()
   {
     shooting = !shooting;
     p.pewpew();
+  }
+  if(!songStarted) {
+    song.play();
   }
 }
 function flip_shooting()
