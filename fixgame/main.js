@@ -69,6 +69,10 @@ function draw() {
     s.levelUp();
     console.log("level up");
   }
+  else if(s.winMessage.length != 0) {
+    fill(255);
+    text(s.winMessage, 400, 400);
+  }
   else {
     s.helloMessage();
     s.button();
