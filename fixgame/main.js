@@ -82,10 +82,6 @@ function draw() {
     s.helloMessage();
     s.button();
   }
-  if(l.won) {
-    text("You see your ship floating in the distance...", 400, 400);
-    text("will you be able to repair it?", 400, 420);
-  }
   if(s.winMessage.length != 0) {
     fill(255);
     text(s.winMessage, 400, 400);

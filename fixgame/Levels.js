@@ -111,6 +111,10 @@ class Levels {
     if(this.won && !this.buttonPressedWin) {
       image(enemyImg2, 400, 200);
       s.buttonWin();
+      if(!s.buttonPressedWin) {
+        text("You see your ship floating in the distance...", 400, 400);
+        text("will you be able to repair it?", 400, 420);
+      }
     }
   }
   gameOver() {
