@@ -51,6 +51,7 @@ class StartMenu {
         }
         else {
           this.winMessage = "You failed to collect the needed parts, unlucky.";
+          l.showShip = false;
         }
         l.buttonPressedWin = true;
       }

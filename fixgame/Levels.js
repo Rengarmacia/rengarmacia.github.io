@@ -7,6 +7,7 @@ class Levels {
       this.on = false;
       this.won = false;
       this.buttonPressedWin = false;
+      this.showShip = true;
   }
   falseOn() {
     this.on = false;
@@ -109,7 +110,10 @@ class Levels {
       // wait for mygtukas
     }
     if(this.won && !this.buttonPressedWin) {
-      image(enemyImg2, 400, 200);
+      if(this.showShip) {
+        image(enemyImg2, 400, 200);
+      }
+
       s.buttonWin();
       if(!s.buttonPressedWin) {
         text("You see your ship floating in the distance...", 400, 400);
