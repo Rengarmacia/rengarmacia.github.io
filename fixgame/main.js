@@ -41,7 +41,6 @@ function setup() {
   imageMode(CENTER);
   angleMode(DEGREES);
   // music
-  slider = createSlider(0, 1, 0.5, 0.1);
   song.play();
   // create all objects
   p = new Player(playerImg, beamImg);
@@ -52,9 +51,6 @@ function setup() {
 function draw() {
   background(220);
   image( bgImg, 400, 400);
-
-  song.setVolume(slider.value());
-
   if(s.isStarted()) {
     l.update();
     p.followMouse();
