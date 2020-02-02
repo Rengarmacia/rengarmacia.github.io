@@ -41,8 +41,6 @@ class StartMenu {
         l.falseLevelCleared();
         l.spawn();
         l.trueOn();
-        this.parts = 0;
-
       }
   }
   buttonPressedWin() {
@@ -84,6 +82,7 @@ class StartMenu {
   gameOver() {
     this.gameOverBool = true;
     this.start = false;
+    this.parts = 0;
     l.gameOver();
     this.button();
     fill(255);
