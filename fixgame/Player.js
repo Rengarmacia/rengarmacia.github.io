@@ -67,7 +67,7 @@ class Player {
   }
   returnX()
   {
-    return this.x;
+    return this.pewx;
   }
   returnY()
   {
