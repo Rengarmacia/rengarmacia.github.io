@@ -34,6 +34,7 @@ class StartMenu {
         l.falseLevelCleared();
         l.spawn();
         l.trueOn();
+        this.parts = 0;
       }
   }
   buttonPressedWin() {
