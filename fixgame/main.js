@@ -42,7 +42,8 @@ function setup() {
   angleMode(DEGREES);
   // music
   slider = createSlider(0, 1, 0.1, 0.01);
-  slider.style("float", "left");
+  slider.class("slider");
+  slider.id("slider1");
   // create all objects
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
