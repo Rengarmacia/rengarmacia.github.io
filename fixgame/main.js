@@ -29,7 +29,7 @@ function preload() {
   bgImg = loadImage('bkgd_0.jpg');
   playerImg = loadImage('Alien-Cruiser.png');
   beamImg = loadImage('beam.png');
-  heartImg = loadImage('heart.png')
+  heartImg = loadImage('heart.png');
 
   song = loadSound("bensound-slowmotion.mp3");
 
@@ -42,7 +42,7 @@ function setup() {
   angleMode(DEGREES);
   // music
   slider = createSlider(0, 1, 0.5, 0.1);
-
+  song.play();
   // create all objects
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
