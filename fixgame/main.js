@@ -40,7 +40,7 @@ function setup() {
   imageMode(CENTER);
   angleMode(DEGREES);
   // music
-  slider = createSlider(0, 1, 0, 0.01);
+  slider = createSlider(0, 1, 0.1, 0.01);
   // create all objects
   p = new Player(playerImg, beamImg);
   s = new StartMenu();
