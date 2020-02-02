@@ -25,6 +25,12 @@ class StartMenu {
     fill(0);
     text("Start", this.x1, this.y1 + 4*LINEHEIGHT + 5);
   }
+  buttonWin() {
+    fill(255);
+    rect(this.x1 - this.rectSize/2, this.y1 + 3 * LINEHEIGHT, this.rectSize, this.rectSize/2);
+    fill(0);
+    text("Repair", this.x1, this.y1 + 4*LINEHEIGHT + 5);
+  }
   buttonPressed() {
     if(mouseX > this.x1 - this.rectSize/2 && mouseX < this.x1 + this.rectSize/2
       && mouseY > this.y1 + 3 * LINEHEIGHT && mouseY < this.y1 + 5 * LINEHEIGHT) {

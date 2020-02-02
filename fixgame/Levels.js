@@ -110,7 +110,7 @@ class Levels {
     }
     if(this.won && !this.buttonPressedWin) {
       image(enemyImg2, 400, 200);
-      s.button();
+      s.buttonWin();
     }
   }
   gameOver() {
