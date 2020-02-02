@@ -31,10 +31,12 @@ class StartMenu {
         this.start = true;
         this.gameOverBool = false;
         this.health = 3;
+        e = [];
         l.falseLevelCleared();
         l.spawn();
         l.trueOn();
         this.parts = 0;
+
       }
   }
   buttonPressedWin() {
