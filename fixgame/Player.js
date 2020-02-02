@@ -21,7 +21,7 @@ class Player {
     //beam
     this.beamWidth = 18;
     this.beamL = 0;
-
+    this.pewx = 0;
   }
   right()
   {
@@ -48,12 +48,12 @@ class Player {
       // strokeWeight((30 - this.timer)/5);
       this.laserY = this.y - this.timer*25;
       this.beamL = this.y - this.laserY;
-      image(this.beam, this.x,  this.y - this.timer*25, this.beamWidth, this.beamL);
+      image(this.beam, this.pewx,  this.y - this.timer*25, this.beamWidth, this.beamL);
       // strokeWeight(1);
       this.timer++;
     }
 
-    image(this.img, this.x, this.y, this.size, this.size)
+    image(this.img, this.x, this.y, this.size, this.size);
 
 
     // fill(255);
@@ -63,6 +63,7 @@ class Player {
   pewpew()
   {
     this.timer = 0;
+    this.pewx = this.x
   }
   returnX()
   {

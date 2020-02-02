@@ -21,6 +21,7 @@ let l;
 let song;
 let slider;
 let songStarted = false;
+
 function preload() {
   enemyImg = loadImage('mine-1.png');
   enemyImg2 = loadImage('ships/Alien-Frigate.png');
